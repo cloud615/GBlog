@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GBlog.Framework", "GBlog.Framework", "{ECB19FF7-8A07-49ED-AD06-A55FC67C7D70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GBlog.WebPlatform", "GBlog.WebPlatform", "{6FFFDA3B-A92D-4610-B939-2C170B93E096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "GBlog.Framework\Framework\Framework.csproj", "{1285C6B1-9F68-47DE-9005-144C392BA903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "GBlog.Framework\Interface\Interface.csproj", "{ABA1B098-DD84-4C17-99E2-EB4C67050D79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "GBlog.Framework\Model\Model.csproj", "{E71BC33D-950B-474F-9412-EC5CF5270A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBlog.WebPlatform.BLL", "GBlog.WebPlatform\GBlog.WebPlatform.BLL\GBlog.WebPlatform.BLL.csproj", "{82BD0C09-7D5C-4C29-B8AF-9897B1CD2037}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBlog.WebPlatform.DAL", "GBlog.WebPlatform\GBlog.WebPlatform.DAL\GBlog.WebPlatform.DAL.csproj", "{4A2489D1-B951-4E16-A185-0230B17E4193}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBlog.WebPlatform.Web", "GBlog.WebPlatform\GBlog.WebPlatform.Web\GBlog.WebPlatform.Web.csproj", "{59E05A41-1024-405E-9D04-04CDB6A102CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1285C6B1-9F68-47DE-9005-144C392BA903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1285C6B1-9F68-47DE-9005-144C392BA903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1285C6B1-9F68-47DE-9005-144C392BA903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1285C6B1-9F68-47DE-9005-144C392BA903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA1B098-DD84-4C17-99E2-EB4C67050D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA1B098-DD84-4C17-99E2-EB4C67050D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA1B098-DD84-4C17-99E2-EB4C67050D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA1B098-DD84-4C17-99E2-EB4C67050D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E71BC33D-950B-474F-9412-EC5CF5270A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71BC33D-950B-474F-9412-EC5CF5270A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71BC33D-950B-474F-9412-EC5CF5270A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71BC33D-950B-474F-9412-EC5CF5270A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82BD0C09-7D5C-4C29-B8AF-9897B1CD2037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82BD0C09-7D5C-4C29-B8AF-9897B1CD2037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82BD0C09-7D5C-4C29-B8AF-9897B1CD2037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82BD0C09-7D5C-4C29-B8AF-9897B1CD2037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2489D1-B951-4E16-A185-0230B17E4193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2489D1-B951-4E16-A185-0230B17E4193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2489D1-B951-4E16-A185-0230B17E4193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2489D1-B951-4E16-A185-0230B17E4193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E05A41-1024-405E-9D04-04CDB6A102CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E05A41-1024-405E-9D04-04CDB6A102CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E05A41-1024-405E-9D04-04CDB6A102CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E05A41-1024-405E-9D04-04CDB6A102CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1285C6B1-9F68-47DE-9005-144C392BA903} = {ECB19FF7-8A07-49ED-AD06-A55FC67C7D70}
+		{ABA1B098-DD84-4C17-99E2-EB4C67050D79} = {ECB19FF7-8A07-49ED-AD06-A55FC67C7D70}
+		{E71BC33D-950B-474F-9412-EC5CF5270A3F} = {ECB19FF7-8A07-49ED-AD06-A55FC67C7D70}
+		{82BD0C09-7D5C-4C29-B8AF-9897B1CD2037} = {6FFFDA3B-A92D-4610-B939-2C170B93E096}
+		{4A2489D1-B951-4E16-A185-0230B17E4193} = {6FFFDA3B-A92D-4610-B939-2C170B93E096}
+		{59E05A41-1024-405E-9D04-04CDB6A102CC} = {6FFFDA3B-A92D-4610-B939-2C170B93E096}
+	EndGlobalSection
+EndGlobal
