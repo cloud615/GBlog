@@ -1,5 +1,0 @@
-D:\develop\GitHub\GBlog\GBlog.Framework\Interface\bin\Debug\Interface.dll
-D:\develop\GitHub\GBlog\GBlog.Framework\Interface\bin\Debug\Interface.pdb
-D:\develop\GitHub\GBlog\GBlog.Framework\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
-D:\develop\GitHub\GBlog\GBlog.Framework\Interface\obj\Debug\Interface.dll
-D:\develop\GitHub\GBlog\GBlog.Framework\Interface\obj\Debug\Interface.pdb
