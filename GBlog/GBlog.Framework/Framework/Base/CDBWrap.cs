@@ -1,5 +1,6 @@
 ﻿using GBlog.Framework.DBHelper;
 using GBlog.Framework.Interface;
+using System.Configuration;
 
 namespace GBlog.Framework.Base
 {
@@ -18,6 +19,7 @@ namespace GBlog.Framework.Base
         /// </summary>
         public CDBWrap()
         {
+            m_DbObj = GetDbObj(ConfigurationManager.AppSettings["dbType"], ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["dbConn"]].ConnectionString);
         }
 
         /// <summary>
@@ -48,7 +50,6 @@ namespace GBlog.Framework.Base
                 default:
                     m_DbObj = new CSqlDBWrap(strconn);
                     break;
-
             }
             return m_DbObj;
         }
