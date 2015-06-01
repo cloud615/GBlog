@@ -1,5 +1,6 @@
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\bin\Debug\GBlog.WebPlatform.BLL.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\bin\Debug\GBlog.WebPlatform.BLL.pdb
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlog.WebPlatform.BLL.csprojResolveAssemblyReference.cache
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlog.WebPlatform.BLL.dll
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlog.WebPlatform.BLL.pdb
+D:\develop\GitHub\GBlog\CommonLibrary\GBlogWebPlatformBLL.dll
+D:\develop\GitHub\GBlog\CommonLibrary\GBlogWebPlatformBLL.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlogWebPlatformBLL.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlogWebPlatformBLL.pdb

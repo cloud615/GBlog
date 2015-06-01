@@ -1,4 +1,6 @@
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.DAL\bin\Debug\GBlog.WebPlatform.DAL.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.DAL\bin\Debug\GBlog.WebPlatform.DAL.pdb
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.DAL\obj\Debug\GBlog.WebPlatform.DAL.dll
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.DAL\obj\Debug\GBlog.WebPlatform.DAL.pdb
+D:\develop\GitHub\GBlog\CommonLibrary\GBlogWebPlatformDAL.dll
+D:\develop\GitHub\GBlog\CommonLibrary\GBlogWebPlatformDAL.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.DAL\obj\Debug\GBlogWebPlatformDAL.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.DAL\obj\Debug\GBlogWebPlatformDAL.pdb

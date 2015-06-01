@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Model.DataBaseViewModel
 {
-    class LoginUser
+    public class LoginUser
     {
+
     }
 }

@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GBlog.WebPlatform.Web</RootNamespace>
-    <AssemblyName>GBlog.WebPlatform.Web</AssemblyName>
+    <AssemblyName>GBlogWebPlatformWeb</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>

@@ -1,6 +1,6 @@
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlog.WebPlatform.Web.dll.config
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlog.WebPlatform.Web.dll
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlog.WebPlatform.Web.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformWeb.dll.config
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformWeb.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformWeb.pdb
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\Antlr3.Runtime.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\EntityFramework.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\EntityFramework.SqlServer.dll
@@ -70,5 +70,5 @@ D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Micr
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlog.WebPlatform.Web.csprojResolveAssemblyReference.cache
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlog.WebPlatform.Web.dll
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlog.WebPlatform.Web.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlogWebPlatformWeb.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlogWebPlatformWeb.pdb
