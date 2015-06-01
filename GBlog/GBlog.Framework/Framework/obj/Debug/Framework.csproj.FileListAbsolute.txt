@@ -1,0 +1,5 @@
+D:\develop\GitHub\GBlog\GBlog.Framework\Framework\bin\Debug\Framework.dll
+D:\develop\GitHub\GBlog\GBlog.Framework\Framework\bin\Debug\Framework.pdb
+D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\Framework.dll
+D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\Framework.pdb

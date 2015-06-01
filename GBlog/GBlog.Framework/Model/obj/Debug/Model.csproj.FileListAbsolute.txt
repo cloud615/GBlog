@@ -1,0 +1,5 @@
+D:\develop\GitHub\GBlog\GBlog.Framework\Model\bin\Debug\Model.dll
+D:\develop\GitHub\GBlog\GBlog.Framework\Model\bin\Debug\Model.pdb
+D:\develop\GitHub\GBlog\GBlog.Framework\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\develop\GitHub\GBlog\GBlog.Framework\Model\obj\Debug\Model.dll
+D:\develop\GitHub\GBlog\GBlog.Framework\Model\obj\Debug\Model.pdb
