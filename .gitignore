@@ -1,0 +1,8 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/GBlog/GBlog.Framework/Framework/obj/Debug
+/GBlog/GBlog.Framework/Model/obj/Debug
+/GBlog/GBlog.WebPlatform/GBlog.WebPlatform.BLL/obj/Debug
+/GBlog/GBlog.WebPlatform/GBlog.WebPlatform.DAL/obj/Debug

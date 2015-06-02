@@ -4,3 +4,4 @@ D:\develop\GitHub\GBlog\CommonLibrary\GBlogWebPlatformBLL.dll
 D:\develop\GitHub\GBlog\CommonLibrary\GBlogWebPlatformBLL.pdb
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlogWebPlatformBLL.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlogWebPlatformBLL.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.BLL\obj\Debug\GBlog.WebPlatform.BLL.csprojResolveAssemblyReference.cache

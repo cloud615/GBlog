@@ -1,6 +1,8 @@
 ﻿using GBlog.Framework.Interface;
 using System.Data;
 using GBlog.Model;
+using System.Collections.Generic;
+using GBlog.Framework.StaticObject;
 
 namespace GBlog.Framework.Base
 {
@@ -20,13 +22,13 @@ namespace GBlog.Framework.Base
 
         public virtual bool Insert(BaseModel model)
         {
-            throw new System.NotImplementedException();
+            throw new System.NotImplementedException();            
+            
             // 获取并设置主键
 
             // ORM : 调用 驱动执行操作
 
             // ADO ：拼接SQL，生成参数集合，执行sql
-
         }
 
         public bool Delete(BaseModel model)
@@ -49,7 +51,7 @@ namespace GBlog.Framework.Base
             throw new System.NotImplementedException();
         }
 
-        public System.Collections.Generic.List<BaseModel> GetList(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
+        public List<BaseModel> GetList(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
         {
             throw new System.NotImplementedException();
         }

@@ -55,7 +55,10 @@
     <Compile Include="Interface\IBLL.cs" />
     <Compile Include="Interface\IDAL.cs" />
     <Compile Include="Interface\IDBInterface.cs" />
+    <Compile Include="Interface\ISQLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLHelper\MySqlBuilder.cs" />
+    <Compile Include="StaticObject\ReflectionStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
