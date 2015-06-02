@@ -1,7 +1,7 @@
 D:\develop\GitHub\GBlog\GBlog.Framework\Framework\bin\Debug\Framework.dll
 D:\develop\GitHub\GBlog\GBlog.Framework\Framework\bin\Debug\Framework.pdb
+D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
 D:\develop\GitHub\GBlog\CommonLibrary\GBlogFramework.dll
 D:\develop\GitHub\GBlog\CommonLibrary\GBlogFramework.pdb
 D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\GBlogFramework.dll
 D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\GBlogFramework.pdb
-D:\develop\GitHub\GBlog\GBlog.Framework\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache

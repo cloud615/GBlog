@@ -10,11 +10,11 @@ namespace GBlog.Framework.Interface
 {
     public interface IDAL
     {
-        bool Insert(BaseModel model);
-        bool Delete(BaseModel model);
-        bool Update(BaseModel model);
+        string Insert(BaseModel model);
+        string Delete(BaseModel model);
+        string Update(BaseModel model);
         BaseModel Select(string primaryKey);
-        DataTable GetDataTable(int pageIndex,int pageSize,string whereStr,string orderByStr,ref int dataCount);
+        DataTable GetDataTable(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount);
         List<BaseModel> GetList(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount);
     }
 }

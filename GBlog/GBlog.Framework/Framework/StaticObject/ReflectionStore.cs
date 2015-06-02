@@ -168,6 +168,7 @@ namespace GBlog.Framework.StaticObject
     {
         public string TableName { get; set; }
         public string PrimaryKey { get; set; }
+        public PropertyInfo PrimaryKeyProperty { get; set; }
         public List<string> Fields { get; set; }
         public List<PropertyInfo> Properties { get; set; }
     }

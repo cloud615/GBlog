@@ -1,5 +1,6 @@
 ﻿using GBlog.Framework.DBHelper;
 using GBlog.Framework.Interface;
+using GBlog.Framework.SqlBuilder;
 using System.Configuration;
 
 namespace GBlog.Framework.Base
@@ -14,6 +15,10 @@ namespace GBlog.Framework.Base
         /// 数据库操作接口对象
         /// </summary>
         public IDBInterface m_DbObj;
+        /// <summary>
+        /// 数据库SQL语句、参数生成对象
+        /// </summary>
+        public ISqlBuilder m_SqlBuilder { get; set; }
         /// <summary>
         /// 默认web.config中的数据连接字串
         /// </summary>
@@ -34,24 +39,31 @@ namespace GBlog.Framework.Base
             {
                 case "system.data.sqlclient":
                     m_DbObj = new CSqlDBWrap(strconn);
+                    m_SqlBuilder = new MsSqlBuilder();
                     break;
                 case "mysql.data.mysqlclient":
                     m_DbObj = new CMySqlDBWrap(strconn);
+                    m_SqlBuilder = new MySqlBuilder();
                     break;
                 case "system.data.odbc":
                     m_DbObj = new COdbcDBWrap(strconn);
+                    m_SqlBuilder = new OdbcSqlBuilder();
                     break;
                 case "system.data.oledb":
                     m_DbObj = new COleDBWrap(strconn);
+                    m_SqlBuilder = new OleDBSqlBuilder();
                     break;
                 case "system.data.oracleclient":
                     m_DbObj = new COracleDBWrap(strconn);
+                    m_SqlBuilder = new OracleSqlBuilder();
                     break;
                 default:
                     m_DbObj = new CSqlDBWrap(strconn);
+                    m_SqlBuilder = new MsSqlBuilder();
                     break;
             }
             return m_DbObj;
         }
+
     }
 }

@@ -9,6 +9,7 @@ namespace GBlog.Framework.Base
     public class BaseDAL
     {
         protected IDBInterface objDBWrap = null;
+        protected ISqlBuilder objSqlBuilder = null;
         DataSet ds = new DataSet();
 
         /// <summary>
@@ -18,25 +19,32 @@ namespace GBlog.Framework.Base
         {
             CDBWrap obj = new CDBWrap();
             objDBWrap = obj.m_DbObj;
+            objSqlBuilder = obj.m_SqlBuilder;
         }
 
-        public virtual bool Insert(BaseModel model)
+        public virtual string Insert(BaseModel model)
         {
-            throw new System.NotImplementedException();            
-            
-            // 获取并设置主键
+            //throw new System.NotImplementedException();            
 
-            // ORM : 调用 驱动执行操作
+            // 具体实现中，获取并设置主键
+            objSqlBuilder.SetPrimaryKey(objDBWrap, model);
+            // A) ORM : 调用 驱动执行操作
+            // B) ADO ：拼接SQL，生成参数集合，执行sql
+            // 获取sql、参数集合
+            string sql = objSqlBuilder.InitInsertSQL(model);
+            List<IDbDataParameter> parameters = objSqlBuilder.InitParameters(model);
+            string strError = string.Empty;
 
-            // ADO ：拼接SQL，生成参数集合，执行sql
+            bool result = objDBWrap.ExecuteSQLNonQuery(sql, parameters, out strError);
+            return result ? "true" : strError;
         }
 
-        public bool Delete(BaseModel model)
+        public string Delete(BaseModel model)
         {
             throw new System.NotImplementedException();
         }
 
-        public bool Update(BaseModel model)
+        public string Update(BaseModel model)
         {
             throw new System.NotImplementedException();
         }

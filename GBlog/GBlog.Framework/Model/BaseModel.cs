@@ -8,6 +8,6 @@ namespace GBlog.Model
 {
     public class BaseModel
     {
-
+        public object PrimaryKeyValue { get; set; }
     }
 }

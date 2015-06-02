@@ -1,23 +1,35 @@
 ﻿using GBlog.Framework.Interface;
 using GBlog.Framework.StaticObject;
 using GBlog.Model;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GBlog.Framework.SQLHelper
+namespace GBlog.Framework.Base
 {
-    public class MySqlBuilder : ISQLHelper
+    public class BaseSqlBuilder
     {
-        public string GetNewPrimaryKeyValue(string tableName, string primaryKey)
+        protected readonly string _parameterSign;
+        public BaseSqlBuilder(string parameterSign)
         {
-            string sql = string.Format("select max({0}) from {1} ", primaryKey, tableName);
-            return "";
+            if (string.IsNullOrWhiteSpace(parameterSign))
+            {
+                throw new ArgumentNullException();
+            }
+            _parameterSign = parameterSign;
+        }
+
+        public void SetPrimaryKey(IDBInterface dbHelper, BaseModel model)
+        {
+            ReflectioinObject reflectionObject = ReflectionStore.ReadModelMessage(model.GetType());
+
+            string sql = string.Format("select max({0})+1 from {1} ", reflectionObject.PrimaryKey, reflectionObject.TableName);
+            string strError = string.Empty;
+            model.PrimaryKeyValue = dbHelper.GetScalarBySQL<int>(sql, out strError);
+
+            reflectionObject.PrimaryKeyProperty.SetValue(model, model.PrimaryKeyValue);
         }
         public string InitInsertSQL(BaseModel model)
         {
@@ -58,25 +70,10 @@ namespace GBlog.Framework.SQLHelper
             }
             var temp = sb.ToString().TrimEnd(',', ' ');
 
-
             sql = string.Format(sql, reflectionObject.TableName, temp, reflectionObject.PrimaryKey);
 
             return sql;
         }
 
-        public List<IDataParameter> InitParameters(BaseModel model, List<string> fields)
-        {
-            List<IDataParameter> list = new List<IDataParameter>();
-
-            ReflectioinObject reflectionObject = ReflectionStore.ReadModelMessage(model.GetType());
-
-            for (int i = 0; i < reflectionObject.Fields.Count; i++)
-            {
-                IDataParameter param = new MySqlParameter("@" + reflectionObject.Fields[i], 
-                                                        reflectionObject.Properties[i].GetValue(model));
-                list.Add(param);
-            }
-            return list;
-        }
     }
 }
