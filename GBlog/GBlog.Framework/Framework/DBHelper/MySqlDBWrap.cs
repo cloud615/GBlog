@@ -597,7 +597,7 @@ namespace GBlog.Framework.DBHelper
                     return null;
                 }
             }
-            
+
             MySqlDataReader objDataReader = null;
             try
             {
@@ -894,9 +894,9 @@ namespace GBlog.Framework.DBHelper
         /// <param name="bCloseDB">是否关闭数据库,true=关闭</param>
         /// <param name="strError">输出错误信息</param>
         /// <returns>返回指定的DataTable</returns>
-        public DataTable GetDataTableBySql(string strSQL, string strTableName, bool bCloseDB, out string strError)
+        public DataTable GetDataTableBySql(string strSQL, string strTableName, bool bCloseDB, out string strError, params IDbDataParameter[] parameters)
         {
-            DataTable objDataSet = GetDataTableBySql(strSQL, strTableName, out strError);
+            DataTable objDataSet = GetDataTableBySql(strSQL, strTableName, out strError, parameters);
             if (bCloseDB)
             {
                 this.CloseDB(out strCloseError);
@@ -907,47 +907,21 @@ namespace GBlog.Framework.DBHelper
         /// 通过具体的sql语句得到一个DataTable
         /// </summary>
         /// <param name="strSQL">sql语句</param>
-        /// <param name="strTableName">得到的Table名称，一般情况写表名</param>
         /// <param name="strError">输出错误信息</param>
         /// <returns></returns>
-        public DataTable GetDataTableBySql(string strSQL, string strTableName, out string strError)
+        public DataTable GetDataTableBySql(string strSQL, out string strError, params IDbDataParameter[] parameters)
         {
-            string strTemp = strSQL;
-            if (strTemp.ToLower().IndexOf("select") == -1)
-            {
-                strError = "不是一个select SQL语句";
-                return null;
-            }
-
-            strError = "";
-            if (!this.IsOpen())
-            {
-                if (!OpenDB(out strError))
-                {
-                    return null;
-                }
-            }
-            DataTable objDataTable = null;
-            try
-            {
-                MySqlDataAdapter odda = new MySqlDataAdapter(strSQL, m_strConnectString);
-                objDataTable = new DataTable(strTableName);
-                odda.Fill(objDataTable);
-            }
-            catch (Exception e)
-            {
-                strError = e.Message;
-            }
-            return objDataTable;
+            return GetDataTableBySql(strSQL, "", out strError, parameters);
         }
 
         /// <summary>
         /// 通过具体的sql语句得到一个DataTable
         /// </summary>
         /// <param name="strSQL">sql语句</param>
+        /// <param name="strTableName">得到的Table名称，一般情况写表名</param>
         /// <param name="strError">输出错误信息</param>
         /// <returns></returns>
-        public DataTable GetDataTableBySql(string strSQL, out string strError)
+        public DataTable GetDataTableBySql(string strSQL, string strTableName, out string strError, params IDbDataParameter[] parameters)
         {
             string strTemp = strSQL;
             if (strTemp.ToLower().IndexOf("select") == -1)
@@ -968,7 +942,14 @@ namespace GBlog.Framework.DBHelper
             try
             {
                 MySqlDataAdapter odda = new MySqlDataAdapter(strSQL, m_strConnectString);
-                objDataTable = new DataTable();
+                if (parameters != null && parameters.Length > 0)
+                {
+                    foreach (var item in parameters)
+                    {
+                        odda.SelectCommand.Parameters.Add(item);
+                    }
+                }
+                objDataTable = new DataTable(strTableName);
                 odda.Fill(objDataTable);
             }
             catch (Exception e)

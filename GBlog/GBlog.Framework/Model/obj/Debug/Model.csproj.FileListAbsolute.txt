@@ -4,3 +4,4 @@ D:\develop\GitHub\GBlog\CommonLibrary\GBlogModel.dll
 D:\develop\GitHub\GBlog\CommonLibrary\GBlogModel.pdb
 D:\develop\GitHub\GBlog\GBlog.Framework\Model\obj\Debug\GBlogModel.dll
 D:\develop\GitHub\GBlog\GBlog.Framework\Model\obj\Debug\GBlogModel.pdb
+D:\develop\GitHub\GBlog\GBlog.Framework\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

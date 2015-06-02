@@ -233,7 +233,7 @@ namespace GBlog.Framework.Interface
         /// <param name="bCloseDB">是否关闭数据库,true=关闭</param>
         /// <param name="strError">输出错误信息</param>
         /// <returns>返回指定的DataTable</returns>
-        DataTable GetDataTableBySql(string strSQL, string strTableName, bool bCloseDB, out string strError);
+        DataTable GetDataTableBySql(string strSQL, string strTableName, bool bCloseDB, out string strError, params IDbDataParameter[] parameters);
         /// <summary>
         /// 通过具体的sql语句得到一个DataTable
         /// </summary>
@@ -241,7 +241,7 @@ namespace GBlog.Framework.Interface
         /// <param name="strTableName">得到的Table名称，一般情况写表名</param>
         /// <param name="strError">输出错误信息</param>
         /// <returns>返回指定的DataTable</returns>
-        DataTable GetDataTableBySql(string strSQL, string strTableName, out string strError);
+        DataTable GetDataTableBySql(string strSQL, string strTableName, out string strError, params IDbDataParameter[] parameters);
 
         /// <summary>
         /// 通过具体的sql语句得到一个DataTable
@@ -249,7 +249,7 @@ namespace GBlog.Framework.Interface
         /// <param name="strSQL">sql语句</param>
         /// <param name="strError">输出错误信息</param>
         /// <returns>返回指定的DataTable</returns>
-        DataTable GetDataTableBySql(string strSQL, out string strError);
+        DataTable GetDataTableBySql(string strSQL, out string strError, params IDbDataParameter[] parameters);
 
         #endregion
 

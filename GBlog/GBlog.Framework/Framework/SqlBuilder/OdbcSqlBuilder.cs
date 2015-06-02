@@ -29,5 +29,14 @@ namespace GBlog.Framework.SqlBuilder
             }
             return list;
         }
+
+        public IDbDataParameter InitPrimaryKeyParameter(BaseModel model)
+        {
+            ReflectioinObject reflectionObject = ReflectionStore.ReadModelMessage(model.GetType());
+            IDbDataParameter param = new OdbcParameter(_parameterSign + reflectionObject.PrimaryKey,
+                                                        reflectionObject.PrimaryKeyProperty.GetValue(model));
+
+            return param;
+        }
     }
 }

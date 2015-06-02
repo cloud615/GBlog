@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseBLL.cs" />
     <Compile Include="Base\BaseDAL.cs" />
+    <Compile Include="Base\BaseDBWrap.cs" />
     <Compile Include="Base\BaseSqlBuilder.cs" />
     <Compile Include="Base\CDBWrap.cs" />
     <Compile Include="DBHelper\MySqlDBWrap.cs" />

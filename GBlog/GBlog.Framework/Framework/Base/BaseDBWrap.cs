@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GBlog.Model
+namespace GBlog.Framework.Base
 {
-    public class BaseModel
+    public class BaseDBWrap
     {
-        //public object PrimaryKeyValue { get; set; }
+       // 当前版本的DBWrap，不需要抽取Base类
     }
 }
