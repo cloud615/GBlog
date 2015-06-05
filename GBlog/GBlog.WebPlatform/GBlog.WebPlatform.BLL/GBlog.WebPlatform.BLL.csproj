@@ -39,7 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseTableBLL\PermissionInfoBLL.cs" />
+    <Compile Include="DataBaseTableBLL\RoleInfoBLL.cs" />
+    <Compile Include="DataBaseTableBLL\UserInfoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GBlog.Framework\Framework\Framework.csproj">
+      <Project>{1285c6b1-9f68-47de-9005-144c392ba903}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GBlog.Framework\Model\Model.csproj">
+      <Project>{e71bc33d-950b-474f-9412-ec5cf5270a3f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBlog.WebPlatform.DAL\GBlog.WebPlatform.DAL.csproj">
+      <Project>{4a2489d1-b951-4e16-a185-0230b17e4193}</Project>
+      <Name>GBlog.WebPlatform.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

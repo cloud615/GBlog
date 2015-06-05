@@ -69,6 +69,15 @@ D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Micr
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlog.WebPlatform.Web.csprojResolveAssemblyReference.cache
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlogWebPlatformWeb.dll
 D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlogWebPlatformWeb.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\obj\Debug\GBlog.WebPlatform.Web.csprojResolveAssemblyReference.cache
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogFramework.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogModel.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformBLL.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\MySql.Data.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformDAL.dll
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogFramework.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogModel.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformBLL.pdb
+D:\develop\GitHub\GBlog\GBlog.WebPlatform\GBlog.WebPlatform.Web\bin\GBlogWebPlatformDAL.pdb

@@ -91,12 +91,12 @@ namespace GBlog.Framework.Base
             // 读取查询结果，生成新的实体对象
             Type type = model.GetType();
             BaseModel modelNew = Activator.CreateInstance(type) as BaseModel;
-
-
+            
             for (int i = 0; i < reflectionObject.Properties.Count; i++)
             {
                 var property = reflectionObject.Properties[i];
-                property.SetValue(modelNew, dr[property.Name]);
+                if (property.CanWrite)
+                    property.SetValue(modelNew, dr[property.Name]);
             }
 
             foreach (var property in reflectionObject.Properties)
@@ -104,21 +104,45 @@ namespace GBlog.Framework.Base
                 // 如果更新对象的 属性值 为空，则 进行赋值操作（将读取的对象的属性赋予model）
                 if (property.GetValue(model) == null)
                 {
-                    property.SetValue(model, property.GetValue(modelNew));
+                    if (property.CanWrite)
+                        property.SetValue(model, property.GetValue(modelNew));
                 }
             }
         }
 
-        public string InitPapingSQL(BaseModel model, int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
+        public string[] InitPapingSQL(BaseModel model, int pageIndex, int pageSize, string whereStr, string orderByStr)
         {
             ReflectioinObject reflectionObject = ReflectionStore.ReadModelMessage(model.GetType());
 
-            string sql = "select top {0} * from {1} where {2} not in (select top {4} {2} from {1} where {5} {6} ) {6}";
+            //string sql = "select top {0} * from {1} where {2} not in (select top {4} {2} from {1} where {5} {6} ) {6}";
 
-            //sql = String.Format("Select * From ({1}) b Where {2} Not In(Select Top {0} {2} From ({1}) a)", startRowIndex - 1, sql, keyColumn);
-            //sql = String.Format("Select Top {0} * From ({1}) b Where {2} Not In(Select Top {3} {2} From ({1}) a)", startRowIndex + maximumRows - 1, sql, keyColumn, startRowIndex - 1);
+            string tableName = reflectionObject.TableName;
+            string primaryKey = reflectionObject.PrimaryKey;
 
-            return "";
+            string baseSQL = string.Format("select * from {0} where {1}", tableName, whereStr);
+
+            string countSQL = string.Format("select count(1) from ({0})", baseSQL);
+
+            int skipNum = (pageIndex - 1) * pageSize;
+            string filterOne = (skipNum + pageSize).ToString();
+            string filterTwo = pageSize.ToString();
+
+            //string sql = @"select top 10 * from 
+            //                        swaccount where acct_id in (
+            //	                                    select top 10 acct_id from (
+            //		                                        select top 300010 acct_id from swaccount order by chkin_dt
+            //		                                    ) as t order by acct_id desc
+            //	                                    )";
+
+            string pagingSQL = string.Format(@"select top {0} * from ({1}) where {2} in (
+                                                    select top 10 {2} from (
+                                                        select top {3} {2} from ({1}) {4}
+                                                        ) as t order by {2} desc
+                                                )", filterTwo, baseSQL, primaryKey, filterOne, orderByStr);
+
+
+
+            return new string[] { countSQL, pagingSQL };
         }
     }
 }

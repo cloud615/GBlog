@@ -3,10 +3,11 @@ using System.Data;
 using GBlog.Model;
 using System.Collections.Generic;
 using GBlog.Framework.StaticObject;
+using GBlog.Framework.Wrap;
 
 namespace GBlog.Framework.Base
 {
-    public class BaseDAL
+    public class BaseDAL<TModel> where TModel : BaseModel
     {
         protected IDBInterface objDBWrap = null;
         protected ISqlBuilder objSqlBuilder = null;
@@ -22,7 +23,7 @@ namespace GBlog.Framework.Base
             objSqlBuilder = obj.m_SqlBuilder;
         }
 
-        public virtual string Insert(BaseModel model)
+        public virtual string Insert(TModel model)
         {
             // A) ORM : 调用 驱动执行操作
             // B) ADO ：拼接SQL，生成参数集合，执行sql
@@ -39,7 +40,7 @@ namespace GBlog.Framework.Base
             return result ? "true" : strError;
         }
 
-        public string Delete(BaseModel model)
+        public string Delete(TModel model)
         {
             string sql = objSqlBuilder.InitDeleteSQL(model);
             List<IDbDataParameter> parameters = new List<IDbDataParameter>() { objSqlBuilder.InitPrimaryKeyParameter(model) };
@@ -49,7 +50,7 @@ namespace GBlog.Framework.Base
             return result ? "true" : strError;
         }
 
-        public string Update(BaseModel model)
+        public string Update(TModel model)
         {
             // 检索并更新model对象
             model = Select(model);
@@ -62,7 +63,7 @@ namespace GBlog.Framework.Base
             return result ? "true" : strError;
         }
 
-        public BaseModel Select(BaseModel model)
+        public TModel Select(TModel model)
         {
             // 具体实现中，根据主键读取数据
             string sql = objSqlBuilder.InitSelectSingleSQL(model);
@@ -81,14 +82,28 @@ namespace GBlog.Framework.Base
             }
         }
 
-        public DataTable GetDataTable(BaseModel model,int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
+        public DataTable GetDataTable(TModel model, int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
         {
-            throw new System.NotImplementedException();
+            string[] sqlArray = objSqlBuilder.InitPapingSQL(model, pageIndex, pageSize, whereStr, orderByStr);
+            string strError = string.Empty;
+            dataCount = objDBWrap.GetScalarBySQL<int>(sqlArray[0], out strError);
+            if (string.IsNullOrWhiteSpace(strError))
+            {
+                DataTable dt = objDBWrap.GetDataTableBySql(sqlArray[1], out strError);
+                if (string.IsNullOrWhiteSpace(strError))
+                {
+                    return dt;
+                }
+            }
+            return null;
         }
 
-        public List<BaseModel> GetList(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
+        public List<TModel> GetList(TModel model, int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount)
         {
-            throw new System.NotImplementedException();
+            DataTable dt = GetDataTable(model, pageIndex, pageSize, whereStr, orderByStr, ref dataCount);
+
+            return FillingStore.FillingModel(model, dt);
         }
+
     }
 }

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace GBlog.Framework.Interface
 {
-    public interface IDAL
+    public interface IDAL<T> where T:BaseModel
     {
-        string Insert(BaseModel model);
-        string Delete(BaseModel model);
-        string Update(BaseModel model);
-        BaseModel Select(string primaryKey);
-        DataTable GetDataTable(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount);
-        List<BaseModel> GetList(int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount);
+        string Insert(T model);
+        string Delete(T model);
+        string Update(T model);
+        T Select(T model);
+        DataTable GetDataTable(T model, int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount);
+        List<T> GetList(T model, int pageIndex, int pageSize, string whereStr, string orderByStr, ref int dataCount);
     }
 }

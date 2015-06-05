@@ -37,6 +37,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,7 +49,8 @@
     <Compile Include="Base\BaseDAL.cs" />
     <Compile Include="Base\BaseDBWrap.cs" />
     <Compile Include="Base\BaseSqlBuilder.cs" />
-    <Compile Include="Base\CDBWrap.cs" />
+    <Compile Include="StaticObject\SerializerStore.cs" />
+    <Compile Include="Wrap\CDBWrap.cs" />
     <Compile Include="DBHelper\MySqlDBWrap.cs" />
     <Compile Include="DBHelper\OdbcDBWrap.cs" />
     <Compile Include="DBHelper\OleDBWrap.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="SqlBuilder\OdbcSqlBuilder.cs" />
     <Compile Include="SqlBuilder\OleDBSqlBuilder.cs" />
     <Compile Include="SqlBuilder\OracleSqlBuilder.cs" />
+    <Compile Include="StaticObject\FillingStore.cs" />
     <Compile Include="StaticObject\ReflectionStore.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -40,7 +40,16 @@ namespace GBlog.Framework.StaticObject
             // 主键名
             string primaryKey = string.Empty;
             string tableName = string.Empty;
-            SignModelAttribute signModelAttr = type.GetCustomAttribute<SignModelAttribute>();
+
+            SignModelAttribute signModelAttr = null;
+            try
+            {
+                signModelAttr = type.GetCustomAttribute<SignModelAttribute>();
+            }
+            catch (Exception)
+            {
+                throw new ArgumentException("SignModelAttribute not define with " + tableName);
+            }
             if (signModelAttr != null)
             {
                 primaryKey = signModelAttr.PrimaryKey;

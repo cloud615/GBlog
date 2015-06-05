@@ -39,7 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseTableDAL\PermissionInfoDAL.cs" />
+    <Compile Include="DataBaseTableDAL\RoleInfoDAL.cs" />
+    <Compile Include="DataBaseTableDAL\UserInfoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GBlog.Framework\Framework\Framework.csproj">
+      <Project>{1285c6b1-9f68-47de-9005-144c392ba903}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GBlog.Framework\Model\Model.csproj">
+      <Project>{e71bc33d-950b-474f-9412-ec5cf5270a3f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
