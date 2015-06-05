@@ -4,4 +4,5 @@
 #
 # Untracked files:
 #
-	/GBlog/packages/
+	GBlog/packages/
+	!MySql.Data.dll
